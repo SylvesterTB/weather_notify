@@ -1,0 +1,11 @@
+root - DEBUG - testing
+urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): api.weatherapi.com:80
+urllib3.connectionpool - DEBUG - http://api.weatherapi.com:80 "GET /v1/current.json?key=83c9e35b1c5e4457be3113017231807&q=Munich HTTP/1.1" 200 None
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.telegram.org:443
+urllib3.connectionpool - DEBUG - https://api.telegram.org:443 "GET /bot6394746388:AAH9cXDsJb3caDc6_3wzuFLFMgnu7t46aH0/sendMessage?chat_id=5946134823&text=('the%20temperature%20is%20greater%20than',%2020) HTTP/1.1" 200 294
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.telegram.org:443
+urllib3.connectionpool - DEBUG - https://api.telegram.org:443 "GET /bot6394746388:AAH9cXDsJb3caDc6_3wzuFLFMgnu7t46aH0/sendMessage?chat_id=5946134823&text=('the%20temperature%20is%20greater%20than',%2020) HTTP/1.1" 200 294
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.telegram.org:443
+urllib3.connectionpool - DEBUG - https://api.telegram.org:443 "GET /bot6394746388:AAH9cXDsJb3caDc6_3wzuFLFMgnu7t46aH0/sendMessage?chat_id=5946134823&text=('the%20temperature%20is%20greater%20than',%2020) HTTP/1.1" 200 294
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.telegram.org:443
+urllib3.connectionpool - DEBUG - https://api.telegram.org:443 "GET /bot6394746388:AAH9cXDsJb3caDc6_3wzuFLFMgnu7t46aH0/sendMessage?chat_id=5946134823&text=('the%20temperature%20is%20greater%20than',%2020) HTTP/1.1" 200 294
