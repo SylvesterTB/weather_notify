@@ -2,13 +2,23 @@ import requests
 from notify_bot import *
 import time
 
+import configparser
 
+def read_api_key():
+    config = configparser.ConfigParser()
+
+    config.read('config.ini')
+
+    api_key = config.get('Credentials', 'API_KEY')
+
+    return api_key
+
+api_key = read_api_key()
 
 
 
 temp_alert = input('At what temperature would you like to be alerted (in celcius)?')
 temp_alert = int(temp_alert)
-api_key = "659959d869704f2f819135008231807"
 city = "Munich" 
 
 base_url = f"http://api.weatherapi.com/v1/current.json?key={api_key}&q={city}"
