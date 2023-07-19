@@ -8,4 +8,4 @@ app = Flask(__name__)
 def index():
     return 'The temperature in Munich' 
 
-app.run(host='127.0.0.1', port=80)
+app.run(host='0.0.0.0', port=81)
