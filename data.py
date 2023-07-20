@@ -1,8 +1,6 @@
 import requests
 from notify_bot import *
 import time
-import schedule
-
 
 import configparser
 
