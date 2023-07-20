@@ -13,8 +13,14 @@ def index():
     return "The web app is working"
 
 @app.route('/start')
-def weather_trigger():
+def weather_start():
    logging.info('test')
+   turn_on()
    weather_detector() 
+
+@app.route('/stop')
+def weather_stop():
+   logging.info('test')
+   turn_off()
 
 app.run(host='0.0.0.0', port=81)
