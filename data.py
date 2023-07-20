@@ -37,7 +37,8 @@ def weather_dect():
     while temperature >= 20:
         if temperature >= 20:
             telebot('the temperature is greater than', 20)
-    else:
-        print("")
-    time.sleep(1000)
+        else:
+            print("")
+        time.sleep(1000)
 
+weather_dect()
