@@ -32,7 +32,7 @@ def get_temperature():
         return temperature
 
 def weather_detector():
-    message_frequency = 600 # in seconds
+    message_frequency = 60 # in seconds
     temperature_threshhold = 10
     temperature = get_temperature()
 
