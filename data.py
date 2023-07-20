@@ -48,5 +48,3 @@ def weather_detector():
             last_execution_time = current_time
 
              
-
-

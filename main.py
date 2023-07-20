@@ -10,6 +10,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
+    return "The web app is working"
+
+@app.route('/start')
+def index():
    logging.info('test')
    weather_detector() 
 
