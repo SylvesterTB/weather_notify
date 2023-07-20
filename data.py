@@ -35,16 +35,13 @@ def weather_detector():
     message_frequency = 60 # in seconds
     temperature_threshhold = 10
     temperature = get_temperature()
-    last_execution_time = time.time()
     while True:
         current_time = time.time()
-        time_elapsed = current_time - last_execution_time
-        if time_elapsed > message_frequency:
-            if temperature >= temperature_threshhold:
-                telebot('the temperature is greater than', temperature_threshhold)
-            else:
-                print("")
-            temperature = get_temperature()
-            last_execution_time = current_time
+        if temperature >= temperature_threshhold:
+            telebot('the temperature is greater than', temperature_threshhold)
+        else:
+            print("")
+        temperature = get_temperature()
+        time.sleep(message_frequency)
 
              
