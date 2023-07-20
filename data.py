@@ -19,26 +19,25 @@ api_key = read_api_key()
 
 #temp_alert = input('At what temperature would you like to be alerted (in celcius)?')
 #temp_alert = int(temp_alert)
-def weather_dect():
+
+def weather_detector():
     city = "Munich" 
 
     base_url = f"http://api.weatherapi.com/v1/current.json?key={api_key}&q={city}"
 
-    response = requests.get(base_url)
-    data = response.json()
+    message_frequency = 60 # in seconds
+    temperature_threshhold = 10
 
-    if response.status_code == 200:
-        temperature = data["current"]["temp_c"]
-        humidity = data["current"]["humidity"]
-        weather_description = data["current"]["condition"]["text"]
+    while temperature >= temperature_threshhold:
+        response = requests.get(base_url)
+        data = response.json()
 
-    
+        if response.status_code == 200:
+            temperature = data["current"]["temp_c"]
 
-    while temperature >= 20:
-        if temperature >= 20:
-            telebot('the temperature is greater than', 20)
+        if temperature >= temperature_threshhold:
+            telebot('the temperature is greater than', temperature_threshhold)
         else:
             print("")
-        time.sleep(1000)
+        time.sleep(message_frequency)
 
-weather_dect()
