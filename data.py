@@ -1,8 +1,14 @@
 import requests
 from notify_bot import *
 import time
-
 import configparser
+from threading import Thread
+import logging
+
+logging.basicConfig(filename='logging_info.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s')
+logger=logging.getLogger() 
+logger.setLevel(logging.DEBUG) 
+logging.getLogger().addHandler(logging.StreamHandler())
 
 def read_api_key():
     config = configparser.ConfigParser()
@@ -32,21 +38,30 @@ def get_temperature():
         return temperature
 
 running = True
+thread = None
+
 
 def turn_off():
+    logger.info('weather turning off...')
+    global running
     running = False
 
 def turn_on():
+     global running
      running = True
 
+
+
 def weather_detector():
-    message_frequency = 60 # in seconds
+    global running
+    message_frequency = 60  # in seconds
     temperature_threshhold = 10
-    temperature = get_temperature()
+    temperature = get_temperature() 
+    logger.info('runnning:' + str(running))
     while running:
-        current_time = time.time()
         if temperature >= temperature_threshhold:
             telebot('the temperature is greater than', temperature_threshhold)
+            logger.info('Checking temperature...')
         else:
             print("")
         temperature = get_temperature()
