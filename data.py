@@ -4,6 +4,8 @@ import time
 import configparser
 from threading import Thread
 import logging
+import os
+
 
 logging.basicConfig(filename='logging_info.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s')
 logger=logging.getLogger() 
@@ -11,15 +13,10 @@ logger.setLevel(logging.DEBUG)
 logging.getLogger().addHandler(logging.StreamHandler())
 
 def read_api_key():
-    config = configparser.ConfigParser()
-
-    config.read('config.ini')
-
-    api_key = config.get('Credentials', 'API_KEY')
-
+    api_key = os.environ['API_KEY'] 
+    logger.info('API_KEY =' + api_key) 
     return api_key
 
-api_key = read_api_key()
 
 
 
@@ -28,7 +25,10 @@ api_key = read_api_key()
 
 def get_temperature():
         city = "Munich" 
-        base_url = f"http://api.weatherapi.com/v1/current.json?key={api_key}&q={city}"
+        api_key = read_api_key()
+        if api_key == '':
+             raise Exception("api_key should not be empty!")
+        base_url = f"http://api.weatherapi.com/v1/current.json?key={read_api_key()}&q={city}"
         response = requests.get(base_url)
         data = response.json()
 
