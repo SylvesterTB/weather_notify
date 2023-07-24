@@ -3,15 +3,15 @@
 ## Description
 
 - **Product**:
-        - **Develop a monitoring tool that:**
-            - Runs on the Render Web Service
-            - Detector can be started via Iphone shortcut
-            - Regularly checks live temperature via API key
-            - Notifies if temperature exceeds the given the max temperature, in the current version: 10 Celcius
-            - The API key is hidden in a enivromental variable
-        - **Telegram notification system**
-            - Uses the telegram bot system aquire chat ID
-            - With the chat ID, once the program detects the max temperature is passed a message is sent to user
+    - **Develop a monitoring tool that:**
+        - Runs on the Render Web Service
+        - Detector can be started via Iphone shortcut
+        - Regularly checks live temperature via API key
+        - Notifies if temperature exceeds the given the max temperature, in the current version: 10 Celcius
+        - The API key is hidden in a enivromental variable
+    - **Telegram notification system**
+        - Uses the telegram bot system aquire chat ID
+        - With the chat ID, once the program detects the max temperature is passed a message is sent to user
 
 ![Alt text](image.png)
 
