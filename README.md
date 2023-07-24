@@ -14,7 +14,6 @@
         - With the chat ID, once the program detects the max temperature is passed a message is sent to user
 
 ![Alt text](image.png)
-
 ## User guide
 
 - Requirements: Server activated, access to /start and /stop link
