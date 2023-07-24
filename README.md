@@ -7,7 +7,7 @@
             - Runs on the Render Web Service
             - Detector can be started via Iphone shortcut
             - Regularly checks live temperature via API key
-            - Notifies if temperature exceeds the given the max temperature give, 10 Celcius
+            - Notifies if temperature exceeds the given the max temperature, in the current version: 10 Celcius
             - The API key is hidden in a enivromental variable
         - **Telegram notification system**
             - Uses the telegram bot system aquire chat ID
