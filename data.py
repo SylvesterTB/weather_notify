@@ -1,7 +1,6 @@
 import requests
 from notify_bot import *
 import time
-import configparser
 from threading import Thread
 import logging
 import os
